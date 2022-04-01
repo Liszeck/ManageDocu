@@ -33,7 +33,7 @@ namespace ManageDocu
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\source\repos\ManageDocu\ManageDocu\Components\Database.mdf;Integrated Security=True");
+            cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\source\repos\ManageDocuOld\ManageDocu\Database.mdf;Integrated Security=True");
             cn.Open();
         }
 

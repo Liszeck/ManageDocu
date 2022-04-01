@@ -113,7 +113,6 @@ namespace ManageDocu
             this.MaximizeBox = false;
             this.Name = "View";
             this.Text = "View";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.View_Load);
             this.ResumeLayout(false);
 
