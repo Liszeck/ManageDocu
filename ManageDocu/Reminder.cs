@@ -22,6 +22,7 @@ namespace ManageDocu
         public Reminder()
         {
             InitializeComponent();
+            GoogleApi();
         }
 
         static string[] Scopes = { CalendarService.Scope.CalendarReadonly };
@@ -32,13 +33,13 @@ namespace ManageDocu
             UserCredential credential;
 
             using (var stream =
-                new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
+                new FileStream("client_secret_200074212393-bi4dccg61rhl1hlf7vv03ok1u35o5a5u.apps.googleusercontent.com.json", FileMode.Open, FileAccess.Read))
             {
                 // The file token.json stores the user's access and refresh tokens, and is created
                 // automatically when the authorization flow completes for the first time.
                 string credPath = "token.json";
                 credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
-                    GoogleClientSecrets.Load(stream).Secrets,
+                    GoogleClientSecrets.FromStream(stream).Secrets,
                     Scopes,
                     "user",
                     CancellationToken.None,
@@ -57,24 +58,35 @@ namespace ManageDocu
             request.TimeMin = DateTime.Now;
             request.ShowDeleted = false;
             request.SingleEvents = true;
-            request.MaxResults = 10;
+            request.MaxResults = 5;
             request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
 
             // List events.
             Events events = request.Execute();
             if (events.Items != null && events.Items.Count > 0)
             {
+                CalendarEvents.Text = "";
                 foreach (var eventItem in events.Items)
                 {
-
+                    CalendarEvents.Text += eventItem.Summary + Environment.NewLine;
                 }
             }
             else
             {
-
+                CalendarEvents.Text = "Hurrá! Nincs több tennivaló!";
             }
 
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GetEvents_Tick(object sender, EventArgs e)
+        {
+            GoogleApi();
         }
     }
 }

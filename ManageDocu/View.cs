@@ -140,5 +140,11 @@ namespace ManageDocu
             Notepad np = new Notepad();
             np.ShowDialog();
         }
+
+        private void RminderBttn_Click(object sender, EventArgs e)
+        {
+            Reminder rm = new Reminder();
+            rm.ShowDialog();
+        }
     }
 }

@@ -142,6 +142,7 @@
     <EmbeddedResource Include="ViewControl.resx">
       <DependentUpon>ViewControl.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="client_secret_200074212393-bi4dccg61rhl1hlf7vv03ok1u35o5a5u.apps.googleusercontent.com.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

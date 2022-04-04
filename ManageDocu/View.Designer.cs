@@ -35,6 +35,7 @@ namespace ManageDocu
             this.NotepadBttn = new System.Windows.Forms.Button();
             this.viewControl2 = new ManageDocu.ViewControl();
             this.viewControl1 = new ManageDocu.ViewControl();
+            this.RminderBttn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -99,11 +100,22 @@ namespace ManageDocu
             this.viewControl1.Size = new System.Drawing.Size(343, 539);
             this.viewControl1.TabIndex = 3;
             // 
+            // RminderBttn
+            // 
+            this.RminderBttn.Location = new System.Drawing.Point(380, 517);
+            this.RminderBttn.Name = "RminderBttn";
+            this.RminderBttn.Size = new System.Drawing.Size(75, 23);
+            this.RminderBttn.TabIndex = 6;
+            this.RminderBttn.Text = "Reminder";
+            this.RminderBttn.UseVisualStyleBackColor = true;
+            this.RminderBttn.Click += new System.EventHandler(this.RminderBttn_Click);
+            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(921, 552);
+            this.Controls.Add(this.RminderBttn);
             this.Controls.Add(this.NotepadBttn);
             this.Controls.Add(this.viewControl2);
             this.Controls.Add(this.viewControl1);
@@ -126,5 +138,6 @@ namespace ManageDocu
         private ViewControl viewControl1;
         private ViewControl viewControl2;
         private System.Windows.Forms.Button NotepadBttn;
+        private System.Windows.Forms.Button RminderBttn;
     }
 }
