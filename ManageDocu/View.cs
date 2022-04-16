@@ -152,5 +152,11 @@ namespace ManageDocu
             FTP fc = new FTP();
             fc.ShowDialog();
         }
+
+        private void btnZip_Click(object sender, EventArgs e)
+        {
+            Zipper zp = new Zipper();
+            zp.ShowDialog();
+        }
     }
 }

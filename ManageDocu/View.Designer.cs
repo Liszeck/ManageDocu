@@ -37,6 +37,7 @@ namespace ManageDocu
             this.viewControl1 = new ManageDocu.ViewControl();
             this.RminderBttn = new System.Windows.Forms.Button();
             this.btnFtpCon = new System.Windows.Forms.Button();
+            this.btnZip = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -121,11 +122,22 @@ namespace ManageDocu
             this.btnFtpCon.UseVisualStyleBackColor = true;
             this.btnFtpCon.Click += new System.EventHandler(this.btnFtpCon_Click);
             // 
+            // btnZip
+            // 
+            this.btnZip.Location = new System.Drawing.Point(380, 378);
+            this.btnZip.Name = "btnZip";
+            this.btnZip.Size = new System.Drawing.Size(75, 23);
+            this.btnZip.TabIndex = 8;
+            this.btnZip.Text = "ZIP";
+            this.btnZip.UseVisualStyleBackColor = true;
+            this.btnZip.Click += new System.EventHandler(this.btnZip_Click);
+            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(921, 552);
+            this.Controls.Add(this.btnZip);
             this.Controls.Add(this.btnFtpCon);
             this.Controls.Add(this.RminderBttn);
             this.Controls.Add(this.NotepadBttn);
@@ -152,5 +164,6 @@ namespace ManageDocu
         private System.Windows.Forms.Button NotepadBttn;
         private System.Windows.Forms.Button RminderBttn;
         private System.Windows.Forms.Button btnFtpCon;
+        private System.Windows.Forms.Button btnZip;
     }
 }

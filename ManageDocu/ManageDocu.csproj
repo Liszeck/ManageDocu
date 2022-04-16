@@ -71,6 +71,12 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -123,6 +129,12 @@
     <Compile Include="View.Designer.cs">
       <DependentUpon>View.cs</DependentUpon>
     </Compile>
+    <Compile Include="Zipper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zipper.Designer.cs">
+      <DependentUpon>Zipper.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewControl.resx">
       <DependentUpon>ViewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zipper.resx">
+      <DependentUpon>Zipper.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="client_secret_200074212393-bi4dccg61rhl1hlf7vv03ok1u35o5a5u.apps.googleusercontent.com.json" />
     <None Include="packages.config" />
