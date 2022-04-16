@@ -36,6 +36,7 @@ namespace ManageDocu
             this.viewControl2 = new ManageDocu.ViewControl();
             this.viewControl1 = new ManageDocu.ViewControl();
             this.RminderBttn = new System.Windows.Forms.Button();
+            this.btnFtpCon = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -110,11 +111,22 @@ namespace ManageDocu
             this.RminderBttn.UseVisualStyleBackColor = true;
             this.RminderBttn.Click += new System.EventHandler(this.RminderBttn_Click);
             // 
+            // btnFtpCon
+            // 
+            this.btnFtpCon.Location = new System.Drawing.Point(380, 425);
+            this.btnFtpCon.Name = "btnFtpCon";
+            this.btnFtpCon.Size = new System.Drawing.Size(75, 23);
+            this.btnFtpCon.TabIndex = 7;
+            this.btnFtpCon.Text = "FTP";
+            this.btnFtpCon.UseVisualStyleBackColor = true;
+            this.btnFtpCon.Click += new System.EventHandler(this.btnFtpCon_Click);
+            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(921, 552);
+            this.Controls.Add(this.btnFtpCon);
             this.Controls.Add(this.RminderBttn);
             this.Controls.Add(this.NotepadBttn);
             this.Controls.Add(this.viewControl2);
@@ -139,5 +151,6 @@ namespace ManageDocu
         private ViewControl viewControl2;
         private System.Windows.Forms.Button NotepadBttn;
         private System.Windows.Forms.Button RminderBttn;
+        private System.Windows.Forms.Button btnFtpCon;
     }
 }

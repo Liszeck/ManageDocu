@@ -246,7 +246,7 @@ namespace ManageDocu
         {
             try
             {
-                AuthorizationRuleCollection rules = Directory.GetAccessControl(path).GetAccessRules(true, true, typeof(SecurityIdentifier));
+                AuthorizationRuleCollection rules = Directory.GetAccessControl(path).GetAccessRules(true, true, typeof(SecurityIdentifier)); //a szabályok csak az AccessRules 
                 WindowsIdentity identity = WindowsIdentity.GetCurrent(); //jelenlegi Windows felhasználó
 
                 foreach (FileSystemAccessRule rule in rules)

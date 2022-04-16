@@ -50,6 +50,8 @@ namespace ManageDocu
                     View view = new View();
                     Presenter presenter = new Presenter(model, view);
                     view.ShowDialog();
+                    cn.Close();
+                    this.Close();
                 }
                 else
                 {

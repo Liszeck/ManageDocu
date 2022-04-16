@@ -146,5 +146,11 @@ namespace ManageDocu
             Reminder rm = new Reminder();
             rm.ShowDialog();
         }
+
+        private void btnFtpCon_Click(object sender, EventArgs e)
+        {
+            FTP fc = new FTP();
+            fc.ShowDialog();
+        }
     }
 }
