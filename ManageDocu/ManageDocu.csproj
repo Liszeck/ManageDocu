@@ -196,6 +196,17 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\icons8-documents-folder-80.png" />
+    <None Include="Resources\icons8-add-folder-80.png" />
+    <None Include="Resources\icons8-archive-80.png" />
+    <None Include="Resources\icons8-notepad-48.png" />
+    <None Include="Resources\icons8-google-calendar-48.png" />
+    <None Include="Resources\icons8-ftp-48.png" />
+    <None Include="Resources\icons8-winrar-48.png" />
+    <None Include="Resources\XILBcC.jpg" />
+    <None Include="Resources\icons8-password-48.png" />
+    <None Include="Resources\icons8-username-48.png" />
+    <None Include="Resources\icons8-documents-folder-96.png" />
     <None Include="Resources\sticky.png" />
   </ItemGroup>
   <ItemGroup>

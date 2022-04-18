@@ -43,7 +43,7 @@ namespace ManageDocu
             // 
             // btnUpload
             // 
-            this.btnUpload.Location = new System.Drawing.Point(510, 166);
+            this.btnUpload.Location = new System.Drawing.Point(469, 164);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(75, 23);
             this.btnUpload.TabIndex = 0;
@@ -54,9 +54,12 @@ namespace ManageDocu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(105, 78);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(71, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.Size = new System.Drawing.Size(72, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "Server";
             // 
@@ -77,9 +80,12 @@ namespace ManageDocu
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(86, 125);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(39, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.Size = new System.Drawing.Size(104, 26);
             this.label2.TabIndex = 3;
             this.label2.Text = "UserName";
             // 
@@ -94,9 +100,12 @@ namespace ManageDocu
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(90, 169);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(49, 160);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.Size = new System.Drawing.Size(94, 26);
             this.label3.TabIndex = 5;
             this.label3.Text = "Password";
             // 
@@ -110,7 +119,7 @@ namespace ManageDocu
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(93, 225);
+            this.progressBar1.Location = new System.Drawing.Point(29, 225);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(496, 23);
             this.progressBar1.TabIndex = 7;
@@ -118,9 +127,12 @@ namespace ManageDocu
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(294, 251);
+            this.lblStatus.BackColor = System.Drawing.Color.Transparent;
+            this.lblStatus.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblStatus.ForeColor = System.Drawing.Color.White;
+            this.lblStatus.Location = new System.Drawing.Point(198, 251);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(70, 13);
+            this.lblStatus.Size = new System.Drawing.Size(106, 23);
             this.lblStatus.TabIndex = 8;
             this.lblStatus.Text = "Uploaded 0%";
             // 
@@ -128,7 +140,8 @@ namespace ManageDocu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::ManageDocu.Properties.Resources.XILBcC;
+            this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.txtPassword);

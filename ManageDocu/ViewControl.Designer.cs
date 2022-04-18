@@ -37,30 +37,27 @@ namespace ManageDocu
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 54);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox1.Location = new System.Drawing.Point(3, 28);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(670, 31);
+            this.textBox1.Size = new System.Drawing.Size(337, 20);
             this.textBox1.TabIndex = 0;
             // 
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(444, 137);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.comboBox1.Location = new System.Drawing.Point(222, 71);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(238, 33);
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.DropDown += new System.EventHandler(this.comboBox1_DropDown);
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(0, 137);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Location = new System.Drawing.Point(0, 71);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 44);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
             this.button1.Text = "Go Back";
             this.button1.UseVisualStyleBackColor = true;
@@ -69,25 +66,22 @@ namespace ManageDocu
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(6, 215);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.listBox1.Location = new System.Drawing.Point(3, 112);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(670, 804);
+            this.listBox1.Size = new System.Drawing.Size(337, 420);
             this.listBox1.TabIndex = 3;
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
             // ViewControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "ViewControl";
-            this.Size = new System.Drawing.Size(686, 1050);
+            this.Size = new System.Drawing.Size(343, 546);
             this.Load += new System.EventHandler(this.ViewControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
