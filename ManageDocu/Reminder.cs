@@ -68,15 +68,14 @@ namespace ManageDocu
                 CalendarEvents.Text = "";
                 foreach (var eventItem in events.Items)
                 {
-                    CalendarEvents.Text += eventItem.Summary + Environment.NewLine;
+                    CalendarEvents.Text += eventItem.Summary + " " + eventItem.Start.DateTime + Environment.NewLine;
                 }
             }
             else
             {
-                CalendarEvents.Text = "Hurrá! Nincs több tennivaló!";
+                CalendarEvents.Text = "Hurray! There is no active document with deadline!";
             }
-
-
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -87,6 +86,11 @@ namespace ManageDocu
         private void GetEvents_Tick(object sender, EventArgs e)
         {
             GoogleApi();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://calendar.google.com/");
         }
     }
 }

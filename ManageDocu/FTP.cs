@@ -34,34 +34,41 @@ namespace ManageDocu
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            string fileName = ((FtpSetting)e.Argument).FileName;
-            string fullName = ((FtpSetting)e.Argument).FullName;
-            string userName = ((FtpSetting)e.Argument).UserName;
-            string password = ((FtpSetting)e.Argument).Password;
-            string server = ((FtpSetting)e.Argument).server;
-            FtpWebRequest request = (FtpWebRequest)WebRequest.Create(new Uri(string.Format("{0}/{1}", server, fileName)));
-            request.Method = WebRequestMethods.Ftp.UploadFile;
-            request.Credentials = new NetworkCredential(userName, password);
-            Stream ftpStream = request.GetRequestStream();
-            FileStream fs = File.OpenRead(fullName);
-            byte[] buffer = new byte[1024];
-            double total = (double)fs.Length;
-            int byteRead = 0;
-            double read = 0;
-            do
+            try
             {
-                if (!backgroundWorker1.CancellationPending)
+                string fileName = ((FtpSetting)e.Argument).FileName;
+                string fullName = ((FtpSetting)e.Argument).FullName;
+                string userName = ((FtpSetting)e.Argument).UserName;
+                string password = ((FtpSetting)e.Argument).Password;
+                string server = ((FtpSetting)e.Argument).server;
+                FtpWebRequest request = (FtpWebRequest)WebRequest.Create(new Uri(string.Format("{0}/{1}", server, fileName)));
+                request.Method = WebRequestMethods.Ftp.UploadFile;
+                request.Credentials = new NetworkCredential(userName, password);
+                Stream ftpStream = request.GetRequestStream();
+                FileStream fs = File.OpenRead(fullName);
+                byte[] buffer = new byte[1024];
+                double total = (double)fs.Length;
+                int byteRead = 0;
+                double read = 0;
+                do
                 {
-                    byteRead = fs.Read(buffer, 0, 1024);
-                    ftpStream.Write(buffer, 0, byteRead);
-                    read += (double)byteRead;
-                    double percentage = read / total * 100;
-                    backgroundWorker1.ReportProgress((int)percentage);
+                    if (!backgroundWorker1.CancellationPending)
+                    {
+                        byteRead = fs.Read(buffer, 0, 1024);
+                        ftpStream.Write(buffer, 0, byteRead);
+                        read += (double)byteRead;
+                        double percentage = read / total * 100;
+                        backgroundWorker1.ReportProgress((int)percentage);
+                    }
                 }
-            } 
-            while (byteRead !=0);
-            fs.Close();
-            ftpStream.Close();
+                while (byteRead != 0);
+                fs.Close();
+                ftpStream.Close();
+            }
+            catch 
+            {
+                MessageBox.Show("Couldn't upload the file to FTP, please check the credentials and your FTP status!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)

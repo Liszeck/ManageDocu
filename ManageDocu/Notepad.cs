@@ -97,5 +97,10 @@ namespace ManageDocu
                 richTextBox1.ForeColor = colorDialog1.Color;
             }
         }
+
+        private void Notepad_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
