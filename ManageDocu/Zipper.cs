@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ManageDocu
 {
@@ -37,7 +38,19 @@ namespace ManageDocu
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ZipFile.ExtractToDirectory(zipfolder, pathtofolder);
+            OpenFileDialog obj = new OpenFileDialog(); //fájl böngésző
+            FolderBrowserDialog obj2 = new FolderBrowserDialog();
+            obj.Filter = "Zip files(*.zip)|*.zip|All files(*.*)|*.*";
+            DialogResult result = obj.ShowDialog(); //fájl kiválasztása
+            DialogResult result1 = obj2.ShowDialog();
+            if (result == DialogResult.OK) //Ha létezik a mappa
+            {
+                zipfolder = obj.FileName;
+                pathtofolder = obj2.SelectedPath;
+                ZipFile.ExtractToDirectory(zipfolder, pathtofolder);
+                MessageBox.Show("Folder is created!");
+            }
+ 
         }
     }
 }
